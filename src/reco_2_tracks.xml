@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<marlin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ilcsoft.desy.de/marlin/marlin.xsd">
+
+  <constants>
+  </constants>
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == List of processors to execute                                                                      == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <execute>
+
+    <!-- ==========  Setup  ========== -->
+    <processor name="MyAIDAProcessor"/>
+    <processor name="EventNumber" />
+
+    <!-- ==========  Geometry initialization  ========== -->
+    <processor name="InitDD4hep"/>
+
+    <!-- ==========  Separating innermost VXDB hits  ========== -->
+    <processor name="VBLayerSplitter"/>
+    <processor name="VELayerSplitter"/>
+
+
+    <!-- ==========  Tracking  ========== -->
+    <!-- At the moment the name of the final track collection for the MyTruthTrackFinder and MyExtrToTracker processors is the same,
+         so that users can use this example to run easily both the cheater track pattern recognition (still the default for many tasks)
+         or the real one (under final tests) -->
+    <processor name="Ct7"/>
+
+    <processor name="ClonesAndSplitTracksFinder"/>
+    <processor name="Refit" />
+
+    <!-- ==========  Output  ========== -->
+    <processor name="Output_REC"/>
+
+  </execute>
+
+
+  <processor name="EventNumber" type="Statusmonitor">
+    <parameter name="HowOften" type="int">1 </parameter>
+    <parameter name="Verbosity" type="string"> MESSAGE </parameter>
+  </processor>
+
+  <processor name="MyAIDAProcessor" type="AIDAProcessor">
+    <!--Processor that handles AIDA files. Creates on directory per processor.  Processors only need to create and fill the histograms, clouds and tuples. Needs to be the first ActiveProcessor-->
+    <!-- compression of output file 0: false >0: true (default) -->
+    <parameter name="Compress" type="int" value="1"/>
+    <!-- filename without extension-->
+    <parameter name="FileName" type="string" value="histo_tracks_muonGun"/>
+    <!-- type of output file xml (default) or root ( only OpenScientist)-->
+    <parameter name="FileType" type="string" value="root "/>
+  </processor>
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Input configuration                                                                               == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <global>
+    <parameter name="LCIOInputFiles">
+      muonGun_reco_hits.slcio
+    </parameter>
+    <!-- Limit the number of processed records (run+evt): -->
+    <parameter name="MaxRecordNumber" value="-1" />
+    <parameter name="SkipNEvents" value="0" />
+    <parameter name="SupressCheck" value="false" />
+    <parameter name="Verbosity" options="DEBUG0-9,MESSAGE0-9,WARNING0-9,ERROR0-9,SILENT">MESSAGE0 </parameter>
+    <parameter name="RandomSeed" value="1234567890" />
+  </global>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Output configuration                                                                               == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <processor name="Output_REC" type="LCIOOutputProcessor">
+    <!--   standard output: full reconstruction keep all collections -->
+    <parameter name="LCIOOutputFile" type="string"> muonGun_reco_tracks.slcio </parameter>
+    <parameter name="FullSubsetCollections" type="StringVec"> EfficientMCParticles InefficientMCParticles </parameter>
+    <parameter name="LCIOWriteMode" type="string" value="WRITE_NEW"/>
+    <!-- <parameter name="SplitFileSizekB" type="int">996147 </parameter> -->
+    <parameter name="Verbosity" type="string">WARNING </parameter>
+    <parameter name="DropCollectionNames" type="StringVec">  </parameter>
+    <parameter name="DropCollectionTypes" type="StringVec"></parameter>
+    <parameter name="KeepCollectionNames" type="StringVec">  </parameter>
+  </processor>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == DD4hep configuration                                                                               == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <processor name="InitDD4hep" type="InitializeDD4hep">
+    <!--InitializeDD4hep reads a compact xml file and initializes the dd4hep::Detector object-->
+    <!--Name of the DD4hep compact xml file to load-->
+    <parameter name="DD4hepXMLFile" type="string">
+      /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/MuColl_v1.xml
+    </parameter>
+    <!--Alternate name for EncodingStringParameterName-->
+    <!--If given, the Compact File parameter of that name will be used as argument to LCTrackerCellID::set_encoding_string()-->
+    <parameter name="EncodingStringParameterName" type="string"> GlobalTrackerReadoutID  </parameter>
+    <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+    <!--parameter name="Verbosity" type="string">DEBUG </parameter-->
+  </processor>
+
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Splitting hits by layers                                                                           == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <processor name="VBLayerSplitter" type="SplitCollectionByLayer">
+    <parameter name="Verbosity" type="string">DEBUG5</parameter>
+    <parameter name="KeepEmptyCollections" type="bool" value="true" />
+    <parameter name="InputCollection" type="String"> VBTrackerHits </parameter>
+    <parameter name="OutputCollections" type="StringVec">
+      VBTrackerHitsInner 0 1
+      VBTrackerHitsMiddle 2 4
+      VBTrackerHitsOuter 5 7
+    </parameter>
+  </processor>
+
+  <processor name="VELayerSplitter" type="SplitCollectionByLayer">
+    <parameter name="Verbosity" type="string">DEBUG5</parameter>
+    <parameter name="KeepEmptyCollections" type="bool" value="true" />
+    <parameter name="InputCollection" type="String"> VETrackerHits </parameter>
+    <parameter name="OutputCollections" type="StringVec">
+      VETrackerHitsInner 0 1
+      VETrackerHitsMiddle 2 3
+      VETrackerHitsOuter 4 7
+    </parameter>
+  </processor>
+
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+  <!-- == Track finding configuration                                                                        == -->
+  <!-- ======================================================================================================== -->
+  <!-- ======================================================================================================== -->
+
+  <!-- == CONFORMAL TRACKING parameters == -->
+
+  <group name="Tracking">
+  <!--ConformalTracking constructs tracks using a combined conformal mapping and cellular automaton approach.-->
+
+    <!--Name of the MCParticle input collection-->
+    <parameter name="MCParticleCollectionName" type="string" lcioInType="MCParticle"> MCParticle </parameter>
+    <!--Silicon track Collection Name-->
+    <parameter name="SiTrackCollectionName" type="string" lcioOutType="Track">SiTracksCT </parameter>
+    <!--Debug hits Collection Name-->
+    <parameter name="DebugHits" type="string" lcioOutType="TrackerHitPlane"> DebugHits </parameter>
+    <!--Maximum number of track hits to try the inverted fit-->
+    <parameter name="MaxHitInvertedFit" type="int">6 </parameter>
+    <!--Final minimum number of track clusters-->
+    <parameter name="MinClustersOnTrackAfterFit" type="int">4 </parameter>
+    <!--enable debug timing -->
+    <parameter name="DebugTiming" type="bool">false </parameter>
+    <!--enable debug plots -->
+    <parameter name="DebugPlots" type="bool">false </parameter>
+    <!--retry with tightened parameters, when too many tracks are being created-->
+    <parameter name="RetryTooManyTracks" type="bool">true </parameter>
+    <parameter name="TooManyTracks" type="int">50000 </parameter>
+    <!--sort results from kdtree search-->
+    <parameter name="SortTreeResults" type="bool">true </parameter>
+    <parameter name="trackPurity" type="double">0.7 </parameter>
+    <parameter name="ThetaRange" type="double"> 0.05 </parameter>
+    <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+    <parameter name="Verbosity" type="string">MESSAGE</parameter>
+
+    <processor name="Ct7" type="ConformalTrackingV2">
+      <parameter name="RelationsNames" type="StringVec" lcioInType="LCRelation"> VBTrackerHitsRelations VBTrackerHitsRelations VBTrackerHitsRelations VETrackerHitsRelations VETrackerHitsRelations VETrackerHitsRelations IBTrackerHitsRelations OBTrackerHitsRelations IETrackerHitsRelations OETrackerHitsRelations </parameter>
+      <!-- Name of the TrackerHit input collections -->
+      <parameter name="TrackerHitCollectionNames" type="StringVec" lcioInType="TrackerHitPlane"> VBTrackerHitsInner VBTrackerHitsMiddle VBTrackerHitsOuter VETrackerHitsInner VETrackerHitsMiddle VETrackerHitsOuter IBTrackerHits OBTrackerHits IETrackerHits OETrackerHits </parameter>
+
+      <parameter name="Steps" type="StringVec">
+        [VXDCentral]
+        @Collections : VBTrackerHitsMiddle, VBTrackerHitsOuter, VETrackerHitsInner
+        @Parameters : MaxCellAngle : 0.01; MaxCellAngleRZ : 0.014; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.01; SlopeZRange: 1.4; HighPTCut: 1.0;
+        @Flags : HighPTFit, VertexToTracker
+        @Functions : CombineCollections, BuildNewTracks
+        [VXDCentralExtend]
+        @Collections : VETrackerHitsInner, VETrackerHitsMiddle
+        @Parameters : MaxCellAngle : 0.01; MaxCellAngleRZ : 0.007; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.006; SlopeZRange: 1.4; HighPTCut: 1.0;
+        @Flags : HighPTFit, VertexToTracker
+        @Functions : CombineCollections, ExtendTracks
+        [VXDMiddle]
+        @Collections : VBTrackerHitsInner, VBTrackerHitsMiddle, VBTrackerHitsOuter, VETrackerHitsInner, VETrackerHitsMiddle
+        @Parameters : MaxCellAngle : 0.015; MaxCellAngleRZ : 0.014; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.02; SlopeZRange: 3.0; HighPTCut: 1.0;
+        @Flags : HighPTFit
+        @Functions : CombineCollections, BuildNewTracks
+        [VXDMiddleExtend]
+        @Collections : VETrackerHitsOuter
+        @Parameters : MaxCellAngle : 0.02; MaxCellAngleRZ : 0.014; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.01; SlopeZRange: 3.0; HighPTCut: 1.0;
+        @Flags : HighPTFit, VertexToTracker
+        @Functions : CombineCollections, ExtendTracks
+        [VXDForward]
+        @Collections : VETrackerHitsInner, VETrackerHitsMiddle, VETrackerHitsOuter
+        @Parameters : MaxCellAngle : 0.03; MaxCellAngleRZ : 0.03; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.02; SlopeZRange: 6.0; HighPTCut: 1.0;
+        @Flags : HighPTFit
+        @Functions : CombineCollections, BuildNewTracks
+        [VXDInner]
+        @Collections : VBTrackerHitsInner
+        @Parameters : MaxCellAngle : 0.015; MaxCellAngleRZ : 0.015; Chi2Cut : 60; MinClustersOnTrack : 5; MaxDistance : 0.015; SlopeZRange: 3.0; HighPTCut: 1.0;
+        @Flags : HighPTFit, RadialSearch
+        @Functions : CombineCollections, ExtendTracks, SortTracks
+        [Tracker]
+        @Collections : IBTrackerHits, OBTrackerHits, IETrackerHits, OETrackerHits
+        @Parameters : MaxCellAngle : 0.04; MaxCellAngleRZ : 0.03; Chi2Cut : 200; MinClustersOnTrack : 6; MaxDistance : 0.02; SlopeZRange: 6.0; HighPTCut: 1.0;
+        @Flags : HighPTFit, VertexToTracker, RadialSearch
+        @Functions : CombineCollections, ExtendTracks
+      </parameter>
+
+    </processor>
+
+  </group>
+
+
+  <processor name="ClonesAndSplitTracksFinder" type="ClonesAndSplitTracksFinder">
+    <parameter name="InputTrackCollectionName" type="string"> SiTracksCT </parameter>
+    <parameter name="OutputTrackCollectionName" type="string"> SiTracks </parameter>
+    <parameter name="MultipleScatteringOn" type="bool"> true </parameter>
+    <parameter name="EnergyLossOn" type="bool"> true </parameter>
+    <parameter name="SmoothOn" type="bool"> false </parameter>
+    <parameter name="extrapolateForward" type="bool"> true </parameter>
+    <parameter name="maxDeltaTheta" type="double"> 0.59 </parameter>
+    <parameter name="maxDeltaPhi" type="double"> 0.99 </parameter>
+    <parameter name="maxDeltaPt" type="double"> 0.69 </parameter>
+    <parameter name="mergeSplitTracks" type="bool"> false </parameter>
+  </processor>
+
+  <processor name="Refit" type="RefitFinal">
+    <!--Refit processor that calls finaliseLCIOTrack after taking the trackstate from the existing track. No re-sorting of hits is done-->
+    <!--Use Energy Loss in Fit-->
+    <parameter name="EnergyLossOn" type="bool"> true </parameter>
+    <!--Name of the input track to MCParticle relation collection-->
+    <parameter name="InputRelationCollectionName" type="string" lcioInType="LCRelation"> SiTrackRelations </parameter>
+    <!--Name of the input track collection-->
+    <parameter name="InputTrackCollectionName" type="string" lcioInType="Track"> SiTracks </parameter>
+    <!--maximum allowable chi2 increment when moving from one site to another-->
+    <parameter name="Max_Chi2_Incr" type="double"> 1.79769e+30 </parameter>
+    <!--Use MultipleScattering in Fit-->
+    <parameter name="MultipleScatteringOn" type="bool"> true </parameter>
+    <!--Refit Track to MCParticle relation collection Name-->
+    <parameter name="OutputRelationCollectionName" type="string" lcioOutType="LCRelation">
+      SiTracks_Refitted_Relation
+    </parameter>
+    <!--Name of the output track collection-->
+    <parameter name="OutputTrackCollectionName" type="string" lcioOutType="Track">
+      SiTracks_Refitted
+    </parameter>
+    <!--Identifier of the reference point to use for the fit initialisation, -1 means at 0 0 0-->
+    <parameter name="ReferencePoint" type="int"> -1 </parameter>
+    <!--Smooth All Mesurement Sites in Fit-->
+    <parameter name="SmoothOn" type="bool"> false </parameter>
+    <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+    <!--parameter name="Verbosity" type="string"> DEBUG </parameter-->
+    <!--if true extrapolation in the forward direction (in-out), otherwise backward (out-in)-->
+    <parameter name="extrapolateForward" type="bool"> true </parameter>
+    <!--Final minimum number of track clusters-->
+    <parameter name="MinClustersOnTrackAfterFit" type="int">3 </parameter>
+  </processor>
+
+
+
+
+</marlin>
