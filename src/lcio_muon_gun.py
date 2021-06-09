@@ -17,7 +17,7 @@ from array import array
 from pyLCIO import UTIL, EVENT, IMPL, IO, IOIMPL
 
 #---- number of events ----------------------
-nevt = 1000
+nevt = 10000
 
 outfile = "muonGun_gen.slcio"
 
@@ -38,11 +38,11 @@ npart = 2
 
 genstat  = 1
 
-pt_min = 0.1
-pt_max = 10.
+pt_min = 1.
+pt_max = 100.
 
-theta_min = 8./180.*math.pi
-theta_max = 172./180.*math.pi
+theta_min = 0.0
+theta_max =2.5
 
 pdg = 13
 
