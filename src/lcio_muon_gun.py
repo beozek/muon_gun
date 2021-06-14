@@ -17,7 +17,7 @@ from array import array
 from pyLCIO import UTIL, EVENT, IMPL, IO, IOIMPL
 
 #---- number of events ----------------------
-nevt = 10000
+nevt = 1000
 
 outfile = "muonGun_gen.slcio"
 
