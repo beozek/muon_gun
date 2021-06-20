@@ -38,7 +38,7 @@ npart = 2
 
 genstat  = 1
 
-pt_min = 1.
+pt_min = 0.
 pt_max = 100.
 
 theta_min = 0.0
