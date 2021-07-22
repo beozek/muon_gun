@@ -78,7 +78,7 @@
         <ClusterListName>PhotonClusters</ClusterListName>
         <ReplaceCurrentClusterList>false</ReplaceCurrentClusterList>
         <ShouldMakePdfHistograms>false</ShouldMakePdfHistograms>
-        <HistogramFile>/workdir/muon_gun/reco/config_files/PandoraSettings/PandoraLikelihoodData12EBin.xml</HistogramFile>
+        <HistogramFile>/home/bozek/muon_gun/src/reco/config_files/PandoraSettings/PandoraLikelihoodData12EBin.xml</HistogramFile>
     </algorithm>
 
     <!-- Clustering parent algorithm runs a daughter clustering algorithm -->
