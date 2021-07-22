@@ -1,0 +1,54 @@
+  <!-- ========== Rename collection (to have same output collection name as FastJet ================================== -->
+
+  <processor name="RenameCollection" type="MergeCollections">
+    <parameter name="CollectionParameterIndex" type="int">0 </parameter>
+    <parameter name="InputCollectionIDs" type="IntVec"> </parameter>
+    <parameter name="InputCollections" type="StringVec"> PandoraPFOs </parameter>
+    <parameter name="OutputCollection" type="string"> PFOsFromJets </parameter>
+  </processor>
+
+  <group name="PVReco">
+    <parameter name="Algorithms" type="stringVec"> PrimaryVertexFinder</parameter>
+    <parameter name="ReadSubdetectorEnergies" type="int" value="0"/> <!-- true for ILD -->
+    <parameter name="UpdateVertexRPDaughters" type="int" value="0"/> <!-- false for non-updative PandoraPFOs -->
+    <parameter name="TrackHitOrdering" type="int" value="2"/> <!-- Track hit ordering: 0=ILD-LOI (default), 1=ILD-DBD, 2=CLICdet -->
+    <parameter name="PrintEventNumber" type="int" value="1"/> <!-- 0 for not printing event number, n for printing every n events -->
+    <!-- specify input collection names -->
+    <parameter name="UseMCP" type="int" value="0" /> <!-- MC info not used -->
+    <parameter name="MCPCollection" type="string" value="MCParticle" />
+    <parameter name="MCPFORelation" type="string" value="RecoMCTruthLink" />
+    <parameter name="MagneticField" type="float" value="4.0"/> <!-- CLIC B field -->
+    <parameter name="BeamSizeX" type="float" value="40.E-6"/> <!-- CLIC beam sizes from CDR -->
+    <parameter name="BeamSizeY" type="float" value="1.0E-6"/>
+    <parameter name="BeamSizeZ" type="float" value="44E-3"/>
+    <!-- parameters for primary vertex finder -->
+    <parameter name="PrimaryVertexFinder.BeamspotSmearing" type="boolean" value="false" />
+    <parameter name="PrimaryVertexFinder.TrackMaxD0" type="double" value="20." />
+    <parameter name="PrimaryVertexFinder.TrackMaxZ0" type="double" value="20." />
+    <parameter name="PrimaryVertexFinder.TrackMaxInnermostHitRadius" type="double" value="61" /><!-- obsolete? -->
+    <parameter name="PrimaryVertexFinder.TrackMinVtxFtdHits" type="int" value="1" />
+    <parameter name="PrimaryVertexFinder.Chi2Threshold" type="double" value="25." />
+    <!-- irrelevant because of TrackMinVtxFtdHits = 1 -->
+    <parameter name="PrimaryVertexFinder.TrackMinFtdHits" type="int" value="999999" />
+    <parameter name="PrimaryVertexFinder.TrackMinVxdHits" type="double" value="999999" />
+    <!-- No tracks with hits only in the main silicon tracker -->
+    <parameter name="PrimaryVertexFinder.TrackMinTpcHits" type="int" value="999999" />
+    <parameter name="PrimaryVertexFinder.TrackMinTpcHitsMinPt" type="double" value="999999" />
+
+    <!-- Primary and Secondary vertex finder ================================================ -->
+    <processor name="VertexFinder" type="LcfiplusProcessor">
+      <!-- run primary and secondary vertex finders -->
+      <parameter name="PFOCollection" type="string" value="PFOsFromJets" />
+      <parameter name="PrimaryVertexCollectionName" type="string" value="PrimaryVertices" />
+      <parameter name="PrimaryVertexFinder.BeamspotConstraint" type="bool">1 </parameter>
+    </processor>
+
+    <!-- Primary and Secondary vertex finder for resolutions ================================= -->
+        <!--<processor name="VertexFinderUnconstrained" type="LcfiplusProcessor"> -->
+            <!-- run primary and secondary vertex finders -->
+        <!--  <parameter name="PFOCollection" type="string" value="TightSelectedPandoraPFOs" /> -->
+        <!--  <parameter name="PrimaryVertexCollectionName" type="string" value="PrimaryVertices_res" /> -->
+        <!--  <parameter name="BuildUpVertexCollectionName" type="string" value="BuildUpVertices_res" /> -->
+        <!--  <parameter name="BuildUpVertex.V0VertexCollectionName" type="string" value="BuildUpVertices_V0_res" /> -->
+        <!--  <parameter name="PrimaryVertexFinder.BeamspotConstraint" type="bool">0 </parameter> -->
+  </group>

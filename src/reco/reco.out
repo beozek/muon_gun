@@ -1,0 +1,601 @@
+<!-- Loading shared library : /opt/ilcsoft/muonc/MarlinDD4hep/v00-06/lib/libMarlinDD4hep.so.0.6.0 (libMarlinDD4hep.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/DDMarlinPandora/v00-12-MC/lib/libDDMarlinPandora.so.0.11.0 (libDDMarlinPandora.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/MarlinReco/v01-28/lib/libMarlinReco.so.1.28.0 (libMarlinReco.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/PandoraAnalysis/v02-00-01/lib/libPandoraAnalysis.so.2.0.1 (libPandoraAnalysis.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/LCFIVertex/v00-08/lib/libLCFIVertexProcessors.so.0.8.0 (libLCFIVertexProcessors.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/CEDViewer/v01-17-01/lib/libCEDViewer.so.1.17.1 (libCEDViewer.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/Overlay/v00-22-02-MC/lib/libOverlay.so.0.22.0 (libOverlay.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/MarlinFastJet/v00-05-02/lib/libMarlinFastJet.so.0.5.2 (libMarlinFastJet.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/LCTuple/v01-13-MC/lib/libLCTuple.so.1.12.0 (libLCTuple.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/MarlinKinfit/v00-06/lib/libMarlinKinfit.so.0.6.0 (libMarlinKinfit.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/MarlinTrkProcessors/v02-12-MC/lib/libMarlinTrkProcessors.so.2.11.0 (libMarlinTrkProcessors.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/MarlinKinfitProcessors/v00-04-02/lib/libMarlinKinfitProcessors.so.0.4.2 (libMarlinKinfitProcessors.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/ILDPerformance/v01-08/lib/libILDPerformance.so.1.8.0 (libILDPerformance.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/ClicPerformance/HEAD/lib/libClicPerformance.so.2.4.1 (libClicPerformance.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/Clupatra/v01-03/lib/libClupatra.so.1.3.0 (libClupatra.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/Physsim/v00-04-01/lib/libPhyssim.so.0.4.1 (libPhyssim.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/LCFIPlus/v00-09/lib/libLCFIPlus.so.0.8.0 (libLCFIPlus.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/FCalClusterer/v01-00-01/lib/libFCalClusterer.so (libFCalClusterer.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/ForwardTracking/v01-14-MC/lib/libForwardTracking.so.1.14.0 (libForwardTracking.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/ConformalTracking/v01-11-MC/lib/libConformalTracking.so.1.10.0 (libConformalTracking.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/LICH/v00-01/lib/libLICH.so.0.1.0 (libLICH.so)-->
+<!-- Loading shared library : /opt/ilcsoft/muonc/Garlic/v03-01/lib/libGarlic.so.3.1.0 (libGarlic.so)-->
+
+[ VERBOSE "MyAIDAProcessor"] ---------------------------------- R A I D A ----------------------------------
+[ VERBOSE "MyAIDAProcessor"] ROOT Implementation of the Abstract Interfaces for Data Analysis (AIDA v3.2.1)
+[ VERBOSE "MyAIDAProcessor"] 
+[ VERBOSE "MyAIDAProcessor"] RAIDA Version: not supported by cvs2svn
+[ VERBOSE "MyAIDAProcessor"] 
+[ VERBOSE "MyAIDAProcessor"] RAIDA only creates simple ROOT histograms
+[ VERBOSE "MyAIDAProcessor"] Used ROOT Release: 6.22/06
+[ VERBOSE "MyAIDAProcessor"] -------------------------------------------------------------------------------
+[ VERBOSE "MyAIDAProcessor"] 
+[ MESSAGE "EventNumber"] 
+[ MESSAGE "EventNumber"] ---- EventNumber -  parameters: 
+[ MESSAGE "EventNumber"] 	HowOften:  1
+[ MESSAGE "EventNumber"] 	Verbosity:  MESSAGE
+[ MESSAGE "EventNumber"] -------------------------------------------------
+[ MESSAGE "Config"] 
+[ MESSAGE "Config"] ---- Config -  parameters: 
+[ MESSAGE "Config"] 	BeamCal:  3TeV
+[ MESSAGE "Config"] 	BeamCalChoices:  3TeV 380GeV 
+[ MESSAGE "Config"] 	Overlay:  False
+[ MESSAGE "Config"] 	OverlayChoices:  False BIB 
+[ MESSAGE "Config"] 	Tracking:  Conformal
+[ MESSAGE "Config"] 	TrackingChoices:  Truth Conformal 
+[ MESSAGE "Config"] 	Verbosity:  DEBUG7
+[ MESSAGE "Config"] 	VertexUnconstrained:  OFF
+[ MESSAGE "Config"] 	VertexUnconstrainedChoices:  ON OFF 
+[ MESSAGE "Config"] -------------------------------------------------
+[ MESSAGE "Config"] BeamCal380GeV                       false
+[ MESSAGE "Config"] BeamCal3TeV                         true
+[ MESSAGE "Config"] BeamCalNot380GeV                    true
+[ MESSAGE "Config"] BeamCalNot3TeV                      false
+[ MESSAGE "Config"] OverlayBIB                          false
+[ MESSAGE "Config"] OverlayFalse                        true
+[ MESSAGE "Config"] OverlayNotBIB                       true
+[ MESSAGE "Config"] OverlayNotFalse                     false
+[ MESSAGE "Config"] TrackingConformal                   true
+[ MESSAGE "Config"] TrackingNotConformal                false
+[ MESSAGE "Config"] TrackingNotTruth                    true
+[ MESSAGE "Config"] TrackingTruth                       false
+[ MESSAGE "Config"] VertexUnconstrainedNotOFF           false
+[ MESSAGE "Config"] VertexUnconstrainedNotON            true
+[ MESSAGE "Config"] VertexUnconstrainedOFF              true
+[ MESSAGE "Config"] VertexUnconstrainedON               false
+[ WARNING4 "Config"]  -----------   
+[ WARNING4 "Config"]  the following processor will modify the LCIO event :  Config !! 
+[ WARNING4 "Config"]  ------------  
+Info in <TGeoManager::TGeoManager>: Geometry default, Detector Geometry created
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/MuColl_v1.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/MuColl_v1.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/MuColl_v1.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/elements.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/elements.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/elements.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/materials.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/materials.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/materials.xml succesfully parsed with TinyXML .....
+DD4hep           WARN  ++ STD conditions NOT defined by client. NTP defaults taken.
+Info in <TGeoManager::SetTopVolume>: Top volume is world_volume. Master volume is world_volume
+Detector         INFO  *********** Created World volume with size: 3000 3000 3000
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/DD4hep/v01-16/DDDetectors/compact/detector_types.xml [Resolved:'/opt/ilcsoft/muonc/DD4hep/v01-16/DDDetectors/compact/detector_types.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/DD4hep/v01-16/DDDetectors/compact/detector_types.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Beampipe_o1_v01_02.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Beampipe_o1_v01_02.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Beampipe_o1_v01_02.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:BeampipeInner of type DD4hep_PolyconeSupport 
+Compact          INFO  ++ Converted subdetector:BeampipeOuter of type DD4hep_PolyconeSupport 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Nozzle_10deg_v0.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Nozzle_10deg_v0.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Nozzle_10deg_v0.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:NozzleW_right of type DD4hep_PolyconeSupport 
+Compact          INFO  ++ Converted subdetector:NozzleW_left of type DD4hep_PolyconeSupport 
+Compact          INFO  ++ Converted subdetector:NozzleBCH_right of type DD4hep_PolyconeSupport 
+Compact          INFO  ++ Converted subdetector:NozzleBCH_left of type DD4hep_PolyconeSupport 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Vertex_o2_v06_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Vertex_o2_v06_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Vertex_o2_v06_01.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :Vertex no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:Vertex of type DD4hep_SubdetectorAssembly 
+Compact          INFO  ++ Converted subdetector:VertexBarrel of type ZSegmentedPlanarTracker [tracker]
+[ VERBOSE "InitDD4hep"] XXX Vertex endcap layers: 8
+Compact          INFO  ++ Converted subdetector:VertexEndcap of type VertexEndcap_o1_v06 [tracker]
+Compact          INFO  ++ Converted subdetector:VertexVerticalCable of type TrackerEndcapSupport_o1_v02 
+VertexEndcap     INFO  +++ Processing SurfaceInstaller for subdetector: 'VertexEndcap'
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = -1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_z = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_y = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: vectors: u( -1 , 0 , 0) v( 0 , 0 , 1) n( 0 , 1 , 0) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTracker_o2_v06_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTracker_o2_v06_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTracker_o2_v06_01.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :InnerTrackers no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:InnerTrackers of type DD4hep_SubdetectorAssembly 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTrackerBarrelModuleDown.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTrackerBarrelModuleDown.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/InnerTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:InnerTrackerBarrel of type TrackerBarrel_o1_v05 [tracker]
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:InnerTrackerEndcap of type TrackerEndcap_o2_v06 [tracker]
+Compact          INFO  ++ Converted subdetector:InnerTrackerBarrelSupport of type TrackerBarrelSupport_o1_v01 
+Compact          INFO  ++ Converted subdetector:InnerTrackerEndcapSupport of type TrackerEndcapSupport_o1_v02 
+Compact          INFO  ++ Converted subdetector:InnerTrackerInterlink of type TubeSupport_o1_v01 
+Compact          INFO  ++ Converted subdetector:InnerTrackerVertexCable of type TubeSupport_o1_v01 
+Compact          INFO  ++ Converted subdetector:BeampipeShell of type ConicalSupport_o1_v01 
+Compact          INFO  ++ Converted subdetector:BeampipeShell2 of type TrackerEndcapSupport_o1_v02 
+Compact          INFO  ++ Converted subdetector:BeampipeShell3 of type TrackerBarrelSupport_o1_v01 
+InnerTrackerBarrel INFO  +++ Processing SurfaceInstaller for subdetector: 'InnerTrackerBarrel'
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+InnerTrackerEndcap INFO  +++ Processing SurfaceInstaller for subdetector: 'InnerTrackerEndcap'
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTracker_o2_v06_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTracker_o2_v06_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTracker_o2_v06_01.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :OuterTrackers no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:OuterTrackers of type DD4hep_SubdetectorAssembly 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleUp.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleUp.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleUp.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleUp.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleUp.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleUp.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleDown.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleDown.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleDown.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/OuterTrackerBarrelModuleDown.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:OuterTrackerBarrel of type TrackerBarrel_o1_v05 [tracker]
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleIn.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/TrackerDiskModuleOut.xml succesfully parsed with TinyXML .....
+Compact          INFO  ++ Converted subdetector:OuterTrackerEndcap of type TrackerEndcap_o2_v06 [tracker]
+Compact          INFO  ++ Converted subdetector:OuterTrackerBarrelSupport of type TrackerBarrelSupport_o1_v01 
+Compact          INFO  ++ Converted subdetector:OuterTrackerEndcapSupport of type TrackerEndcapSupport_o1_v02 
+OuterTrackerBarrel INFO  +++ Processing SurfaceInstaller for subdetector: 'OuterTrackerBarrel'
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+OuterTrackerEndcap INFO  +++ Processing SurfaceInstaller for subdetector: 'OuterTrackerEndcap'
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[1] = dimension = 2
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[2] = u_x = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[3] = v_y = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: argument[4] = n_z = 1
+[ VERBOSE "InitDD4hep"] DD4hep_GenericSurfaceInstallerPlugin: vectors: u( 1 , 0 , 0) v( 0 , 1 , 0) n( 0 , 0 , 1) o( 0 , 0 , 0) 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/ECalBarrel_o2_v01_02.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/ECalBarrel_o2_v01_02.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/ECalBarrel_o2_v01_02.xml succesfully parsed with TinyXML .....
+[ VERBOSE "InitDD4hep"] Layer: 0 Rmin: 150 layer_pos_z: -9.8475 Dist: 150 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 1 Rmin: 150 layer_pos_z: -9.3425 Dist: 150.505 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 2 Rmin: 150 layer_pos_z: -8.8375 Dist: 151.01 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 3 Rmin: 150 layer_pos_z: -8.3325 Dist: 151.515 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 4 Rmin: 150 layer_pos_z: -7.8275 Dist: 152.02 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 5 Rmin: 150 layer_pos_z: -7.3225 Dist: 152.525 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 6 Rmin: 150 layer_pos_z: -6.8175 Dist: 153.03 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 7 Rmin: 150 layer_pos_z: -6.3125 Dist: 153.535 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 8 Rmin: 150 layer_pos_z: -5.8075 Dist: 154.04 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 9 Rmin: 150 layer_pos_z: -5.3025 Dist: 154.545 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 10 Rmin: 150 layer_pos_z: -4.7975 Dist: 155.05 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 11 Rmin: 150 layer_pos_z: -4.2925 Dist: 155.555 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 12 Rmin: 150 layer_pos_z: -3.7875 Dist: 156.06 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 13 Rmin: 150 layer_pos_z: -3.2825 Dist: 156.565 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 14 Rmin: 150 layer_pos_z: -2.7775 Dist: 157.07 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 15 Rmin: 150 layer_pos_z: -2.2725 Dist: 157.575 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 16 Rmin: 150 layer_pos_z: -1.7675 Dist: 158.08 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 17 Rmin: 150 layer_pos_z: -1.2625 Dist: 158.585 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 18 Rmin: 150 layer_pos_z: -0.7575 Dist: 159.09 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 19 Rmin: 150 layer_pos_z: -0.2525 Dist: 159.595 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 20 Rmin: 150 layer_pos_z: 0.2525 Dist: 160.1 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 21 Rmin: 150 layer_pos_z: 0.7575 Dist: 160.605 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 22 Rmin: 150 layer_pos_z: 1.2625 Dist: 161.11 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 23 Rmin: 150 layer_pos_z: 1.7675 Dist: 161.615 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 24 Rmin: 150 layer_pos_z: 2.2725 Dist: 162.12 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 25 Rmin: 150 layer_pos_z: 2.7775 Dist: 162.625 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 26 Rmin: 150 layer_pos_z: 3.2825 Dist: 163.13 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 27 Rmin: 150 layer_pos_z: 3.7875 Dist: 163.635 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 28 Rmin: 150 layer_pos_z: 4.2925 Dist: 164.14 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 29 Rmin: 150 layer_pos_z: 4.7975 Dist: 164.645 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 30 Rmin: 150 layer_pos_z: 5.3025 Dist: 165.15 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 31 Rmin: 150 layer_pos_z: 5.8075 Dist: 165.655 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 32 Rmin: 150 layer_pos_z: 6.3125 Dist: 166.16 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 33 Rmin: 150 layer_pos_z: 6.8175 Dist: 166.665 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 34 Rmin: 150 layer_pos_z: 7.3225 Dist: 167.17 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 35 Rmin: 150 layer_pos_z: 7.8275 Dist: 167.675 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 36 Rmin: 150 layer_pos_z: 8.3325 Dist: 168.18 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 37 Rmin: 150 layer_pos_z: 8.8375 Dist: 168.685 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 38 Rmin: 150 layer_pos_z: 9.3425 Dist: 169.19 inner_thickness: 0.24 outer_thickness: 0.265
+[ VERBOSE "InitDD4hep"] Layer: 39 Rmin: 150 layer_pos_z: 9.8475 Dist: 169.695 inner_thickness: 0.24 outer_thickness: 0.265
+Compact          INFO  ++ Converted subdetector:ECalBarrel of type GenericCalBarrel_o1_v01 [calorimeter]
+ECalBarrel       INFO  +++ Processing SurfaceInstaller for subdetector: 'ECalBarrel'
+DD4hep_CaloFaceBarrelSurfacePlugin INFO  install tracking surfaces for :  ECalBarrel 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/ECalEndcap_o2_v01_02.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/ECalEndcap_o2_v01_02.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/ECalEndcap_o2_v01_02.xml succesfully parsed with TinyXML .....
+[ VERBOSE "InitDD4hep"] Number of layers in group 0 : 40
+Compact          INFO  ++ Converted subdetector:ECalEndcap of type GenericCalEndcap_o1_v01 [calorimeter]
+ECalEndcap       INFO  +++ Processing SurfaceInstaller for subdetector: 'ECalEndcap'
+DD4hep_CaloFaceEndcapSurfacePlugin INFO  install tracking surfaces for :  ECalEndcap 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/HCalBarrel_o1_v01_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/HCalBarrel_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/HCalBarrel_o1_v01_01.xml succesfully parsed with TinyXML .....
+[ VERBOSE "InitDD4hep"] Layer: 0 Rmin: 174 layer_pos_z: -78.175 Dist: 174 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 1 Rmin: 174 layer_pos_z: -75.525 Dist: 176.65 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 2 Rmin: 174 layer_pos_z: -72.875 Dist: 179.3 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 3 Rmin: 174 layer_pos_z: -70.225 Dist: 181.95 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 4 Rmin: 174 layer_pos_z: -67.575 Dist: 184.6 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 5 Rmin: 174 layer_pos_z: -64.925 Dist: 187.25 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 6 Rmin: 174 layer_pos_z: -62.275 Dist: 189.9 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 7 Rmin: 174 layer_pos_z: -59.625 Dist: 192.55 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 8 Rmin: 174 layer_pos_z: -56.975 Dist: 195.2 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 9 Rmin: 174 layer_pos_z: -54.325 Dist: 197.85 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 10 Rmin: 174 layer_pos_z: -51.675 Dist: 200.5 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 11 Rmin: 174 layer_pos_z: -49.025 Dist: 203.15 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 12 Rmin: 174 layer_pos_z: -46.375 Dist: 205.8 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 13 Rmin: 174 layer_pos_z: -43.725 Dist: 208.45 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 14 Rmin: 174 layer_pos_z: -41.075 Dist: 211.1 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 15 Rmin: 174 layer_pos_z: -38.425 Dist: 213.75 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 16 Rmin: 174 layer_pos_z: -35.775 Dist: 216.4 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 17 Rmin: 174 layer_pos_z: -33.125 Dist: 219.05 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 18 Rmin: 174 layer_pos_z: -30.475 Dist: 221.7 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 19 Rmin: 174 layer_pos_z: -27.825 Dist: 224.35 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 20 Rmin: 174 layer_pos_z: -25.175 Dist: 227 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 21 Rmin: 174 layer_pos_z: -22.525 Dist: 229.65 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 22 Rmin: 174 layer_pos_z: -19.875 Dist: 232.3 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 23 Rmin: 174 layer_pos_z: -17.225 Dist: 234.95 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 24 Rmin: 174 layer_pos_z: -14.575 Dist: 237.6 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 25 Rmin: 174 layer_pos_z: -11.925 Dist: 240.25 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 26 Rmin: 174 layer_pos_z: -9.275 Dist: 242.9 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 27 Rmin: 174 layer_pos_z: -6.625 Dist: 245.55 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 28 Rmin: 174 layer_pos_z: -3.975 Dist: 248.2 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 29 Rmin: 174 layer_pos_z: -1.325 Dist: 250.85 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 30 Rmin: 174 layer_pos_z: 1.325 Dist: 253.5 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 31 Rmin: 174 layer_pos_z: 3.975 Dist: 256.15 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 32 Rmin: 174 layer_pos_z: 6.625 Dist: 258.8 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 33 Rmin: 174 layer_pos_z: 9.275 Dist: 261.45 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 34 Rmin: 174 layer_pos_z: 11.925 Dist: 264.1 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 35 Rmin: 174 layer_pos_z: 14.575 Dist: 266.75 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 36 Rmin: 174 layer_pos_z: 17.225 Dist: 269.4 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 37 Rmin: 174 layer_pos_z: 19.875 Dist: 272.05 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 38 Rmin: 174 layer_pos_z: 22.525 Dist: 274.7 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 39 Rmin: 174 layer_pos_z: 25.175 Dist: 277.35 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 40 Rmin: 174 layer_pos_z: 27.825 Dist: 280 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 41 Rmin: 174 layer_pos_z: 30.475 Dist: 282.65 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 42 Rmin: 174 layer_pos_z: 33.125 Dist: 285.3 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 43 Rmin: 174 layer_pos_z: 35.775 Dist: 287.95 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 44 Rmin: 174 layer_pos_z: 38.425 Dist: 290.6 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 45 Rmin: 174 layer_pos_z: 41.075 Dist: 293.25 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 46 Rmin: 174 layer_pos_z: 43.725 Dist: 295.9 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 47 Rmin: 174 layer_pos_z: 46.375 Dist: 298.55 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 48 Rmin: 174 layer_pos_z: 49.025 Dist: 301.2 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 49 Rmin: 174 layer_pos_z: 51.675 Dist: 303.85 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 50 Rmin: 174 layer_pos_z: 54.325 Dist: 306.5 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 51 Rmin: 174 layer_pos_z: 56.975 Dist: 309.15 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 52 Rmin: 174 layer_pos_z: 59.625 Dist: 311.8 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 53 Rmin: 174 layer_pos_z: 62.275 Dist: 314.45 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 54 Rmin: 174 layer_pos_z: 64.925 Dist: 317.1 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 55 Rmin: 174 layer_pos_z: 67.575 Dist: 319.75 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 56 Rmin: 174 layer_pos_z: 70.225 Dist: 322.4 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 57 Rmin: 174 layer_pos_z: 72.875 Dist: 325.05 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 58 Rmin: 174 layer_pos_z: 75.525 Dist: 327.7 inner_thickness: 2.1 outer_thickness: 0.55
+[ VERBOSE "InitDD4hep"] Layer: 59 Rmin: 174 layer_pos_z: 78.175 Dist: 330.35 inner_thickness: 2.1 outer_thickness: 0.55
+Compact          INFO  ++ Converted subdetector:HCalBarrel of type GenericCalBarrel_o1_v01 [calorimeter]
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/HCalEndcap_o1_v01_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/HCalEndcap_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/HCalEndcap_o1_v01_01.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :HCalEndcaps no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:HCalEndcaps of type DD4hep_SubdetectorAssembly 
+[ VERBOSE "InitDD4hep"] Number of layers in group 0 : 12
+[ VERBOSE "InitDD4hep"] Number of layers in group 1 : 12
+[ VERBOSE "InitDD4hep"] Number of layers in group 2 : 12
+[ VERBOSE "InitDD4hep"] Number of layers in group 3 : 12
+[ VERBOSE "InitDD4hep"] Number of layers in group 4 : 12
+Compact          INFO  ++ Converted subdetector:HCalEndcap of type GenericCalEndcap_o2_v01 [calorimeter]
+[ VERBOSE "InitDD4hep"] Cutout z width will be  18.55
+[ VERBOSE "InitDD4hep"] Number of layers in group 0 : 7
+Compact          INFO  ++ Converted subdetector:HCalRing of type GenericCalEndcap_o1_v01 [calorimeter]
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Solenoid_o1_v01_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Solenoid_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/Solenoid_o1_v01_01.xml succesfully parsed with TinyXML .....
+Utilities        INFO  +++ setDetectorTypeFlags for detector :Solenoid no xml element <type_flags/> found - nothing to set 
+Compact          INFO  ++ Converted subdetector:Solenoid of type DD4hep_SubdetectorAssembly 
+Compact          INFO  ++ Converted subdetector:SolenoidBarrel of type DD4hep_Solenoid_o1_v01 
+Compact          INFO  ++ Converted subdetector:SolenoidEndcaps of type DD4hep_DiskTracker 
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/YokeBarrel_o1_v01_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/YokeBarrel_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/YokeBarrel_o1_v01_01.xml succesfully parsed with TinyXML .....
+[ VERBOSE "InitDD4hep"] Layer: 0 Rmin: 446.1 layer_pos_z: -85.2 Dist: 446.1 inner_thickness: 0.75 outer_thickness: 27.65
+[ VERBOSE "InitDD4hep"] Layer: 1 Rmin: 446.1 layer_pos_z: -56.8 Dist: 474.5 inner_thickness: 0.75 outer_thickness: 27.65
+[ VERBOSE "InitDD4hep"] Layer: 2 Rmin: 446.1 layer_pos_z: -28.4 Dist: 502.9 inner_thickness: 0.75 outer_thickness: 27.65
+[ VERBOSE "InitDD4hep"] Layer: 3 Rmin: 446.1 layer_pos_z: 3.55271e-15 Dist: 531.3 inner_thickness: 0.75 outer_thickness: 27.65
+[ VERBOSE "InitDD4hep"] Layer: 4 Rmin: 446.1 layer_pos_z: 28.4 Dist: 559.7 inner_thickness: 0.75 outer_thickness: 27.65
+[ VERBOSE "InitDD4hep"] Layer: 5 Rmin: 446.1 layer_pos_z: 56.8 Dist: 588.1 inner_thickness: 0.75 outer_thickness: 27.65
+[ VERBOSE "InitDD4hep"] Layer: 6 Rmin: 446.1 layer_pos_z: 85.2 Dist: 616.5 inner_thickness: 0.75 outer_thickness: 27.65
+Compact          INFO  ++ Converted subdetector:YokeBarrel of type GenericCalBarrel_o1_v01 [calorimeter]
+DocumentHandler  INFO  +++ Loading document URI: /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/YokeEndcap_o1_v01_01.xml [Resolved:'/opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/YokeEndcap_o1_v01_01.xml']
+DocumentHandler  INFO  +++ Document /opt/ilcsoft/muonc/detector-simulation/geometries/MuColl_v1/YokeEndcap_o1_v01_01.xml succesfully parsed with TinyXML .....
+[ VERBOSE "InitDD4hep"] Number of layers in group 0 : 1
+[ VERBOSE "InitDD4hep"] Number of layers in group 1 : 1
+[ VERBOSE "InitDD4hep"] Number of layers in group 2 : 1
+[ VERBOSE "InitDD4hep"] Number of layers in group 3 : 1
+[ VERBOSE "InitDD4hep"] Number of layers in group 4 : 1
+[ VERBOSE "InitDD4hep"] Number of layers in group 5 : 1
+[ VERBOSE "InitDD4hep"] Number of layers in group 6 : 1
+Compact          INFO  ++ Converted subdetector:YokeEndcap of type GenericCalEndcap_o2_v01 [calorimeter]
+Info in <TGeoManager::CheckGeometry>: Fixing runtime shapes...
+Info in <TGeoManager::CheckGeometry>: ...Nothing to fix
+Info in <TGeoManager::CloseGeometry>: Counting nodes...
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CloseGeometry>: Building cache...
+Info in <TGeoManager::CountLevels>: max level = 5, max placements = 27552
+Info in <TGeoManager::CloseGeometry>: 1591145 nodes/ 261 volume UID's in Detector Geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+Compact          INFO  ++ Converted field: Successfully created field GlobalSolenoid [solenoid]
+Detector         INFO  +++ Patching names of anonymous shapes....
+DD4hepVolumeManager INFO  **** running plugin DD4hepVolumeManager ! 
+VolumeManager    INFO   - populating volume ids - be patient ...
+VolumeManager    INFO   - populating volume ids - done. 78475 nodes.
+VolumeManager    INFO  +++ Volume manager populated and loaded.
+InstallSurfaceManager INFO  **** running plugin InstallSurfaceManager ! 
+InstallSurfaceManager INFO  --------  SurfaceManager contains the following maps : --------- 
+  key: BeampipeInner 	 number of surfaces : 0
+  key: BeampipeOuter 	 number of surfaces : 0
+  key: BeampipeShell 	 number of surfaces : 4
+  key: BeampipeShell2 	 number of surfaces : 4
+  key: BeampipeShell3 	 number of surfaces : 1
+  key: ECalBarrel 	 number of surfaces : 12
+  key: ECalEndcap 	 number of surfaces : 2
+  key: HCalBarrel 	 number of surfaces : 0
+  key: HCalEndcap 	 number of surfaces : 0
+  key: HCalEndcaps 	 number of surfaces : 0
+  key: HCalRing 	 number of surfaces : 0
+  key: InnerTrackerBarrel 	 number of surfaces : 9032
+  key: InnerTrackerBarrelSupport 	 number of surfaces : 4
+  key: InnerTrackerEndcap 	 number of surfaces : 1196
+  key: InnerTrackerEndcapSupport 	 number of surfaces : 20
+  key: InnerTrackerInterlink 	 number of surfaces : 2
+  key: InnerTrackerVertexCable 	 number of surfaces : 2
+  key: InnerTrackers 	 number of surfaces : 10265
+  key: NozzleBCH_left 	 number of surfaces : 0
+  key: NozzleBCH_right 	 number of surfaces : 0
+  key: NozzleW_left 	 number of surfaces : 0
+  key: NozzleW_right 	 number of surfaces : 0
+  key: OuterTrackerBarrel 	 number of surfaces : 64512
+  key: OuterTrackerBarrelSupport 	 number of surfaces : 3
+  key: OuterTrackerEndcap 	 number of surfaces : 1152
+  key: OuterTrackerEndcapSupport 	 number of surfaces : 12
+  key: OuterTrackers 	 number of surfaces : 65679
+  key: Solenoid 	 number of surfaces : 0
+  key: SolenoidBarrel 	 number of surfaces : 0
+  key: SolenoidEndcaps 	 number of surfaces : 0
+  key: Vertex 	 number of surfaces : 1068
+  key: VertexBarrel 	 number of surfaces : 810
+  key: VertexEndcap 	 number of surfaces : 256
+  key: VertexVerticalCable 	 number of surfaces : 2
+  key: YokeBarrel 	 number of surfaces : 0
+  key: YokeEndcap 	 number of surfaces : 0
+  key: calorimeter 	 number of surfaces : 14
+  key: compound 	 number of surfaces : 77012
+  key: passive 	 number of surfaces : 54
+  key: tracker 	 number of surfaces : 76958
+  key: world 	 number of surfaces : 154038
+---------------------------------------------------------------- 
+
+[ WARNING "OverlayBIB"] Attention! There are 16 files in the list of background files to overlay. Make sure that the total number of background events is sufficiently large for your needs!!
+[ WARNING4 "OverlayBIB"]  -----------   
+[ WARNING4 "OverlayBIB"]  the following processor will modify the LCIO event :  OverlayBIB !! 
+[ WARNING4 "OverlayBIB"]  ------------  
+[ WARNING "OverlayFalse"] Attention! There are 1 files in the list of background files to overlay. Make sure that the total number of background events is sufficiently large for your needs!!
+[ WARNING4 "OverlayFalse"]  -----------   
+[ WARNING4 "OverlayFalse"]  the following processor will modify the LCIO event :  OverlayFalse !! 
+[ WARNING4 "OverlayFalse"]  ------------  
+[ MESSAGE "FilterDL_VXDB"] 
+[ MESSAGE "FilterDL_VXDB"] ---- FilterDL_VXDB -  parameters: 
+[ MESSAGE "FilterDL_VXDB"] 	DoubleLayerCuts:  0 1 1.0 0.6 2 3 1.0 0.33 4 5 1.0 0.27 6 7 1.0 0.21 
+[ MESSAGE "FilterDL_VXDB"] 	FillHistograms:  true
+[ MESSAGE "FilterDL_VXDB"] 	InputCollection:  VBTrackerHits
+[ MESSAGE "FilterDL_VXDB"] 	OutputCollection:  VBTrackerHits_DLFiltered
+[ MESSAGE "FilterDL_VXDB"] 	SubDetectorName:  Vertex
+[ MESSAGE "FilterDL_VXDB"] 	Verbosity:  DEBUG5
+[ MESSAGE "FilterDL_VXDB"] -------------------------------------------------
+[ MESSAGE "FilterDL_VXDE"] 
+[ MESSAGE "FilterDL_VXDE"] ---- FilterDL_VXDE -  parameters: 
+[ MESSAGE "FilterDL_VXDE"] 	DoubleLayerCuts:  0 1 1.0 0.21 2 3 1.0 0.18 4 5 0.8 0.12 6 7 0.6 0.12 
+[ MESSAGE "FilterDL_VXDE"] 	FillHistograms:  true
+[ MESSAGE "FilterDL_VXDE"] 	InputCollection:  VETrackerHits
+[ MESSAGE "FilterDL_VXDE"] 	OutputCollection:  VETrackerHits_DLFiltered
+[ MESSAGE "FilterDL_VXDE"] 	SubDetectorName:  Vertex
+[ MESSAGE "FilterDL_VXDE"] 	Verbosity:  DEBUG5
+[ MESSAGE "FilterDL_VXDE"] -------------------------------------------------
