@@ -1307,9 +1307,9 @@
     <!--Name of the Input SimTrackerHit collection-->
     <parameter name="SimTrackHitCollectionName" type="string" lcioInType="SimTrackerHit"> VertexBarrelCollection </parameter>
     <!--Name of TrackerHit SimTrackHit relation collection-->
-    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> VBTrackerHitRelations </parameter>
+    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> VXDTrackerHitRelations </parameter>
     <!--Name of the TrackerHit output collection-->
-    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> VBTrackerHits </parameter>
+    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> VXDTrackerHits </parameter>
     <!--resolution in time-->
     <parameter name="ResolutionT" type="FloatVec"> 0.03  </parameter>
     <!--resolution in direction of u - either one per layer or one for all layers -->
@@ -1336,9 +1336,9 @@
     <!--Name of the Input SimTrackerHit collection-->
     <parameter name="SimTrackHitCollectionName" type="string" lcioInType="SimTrackerHit"> VertexEndcapCollection </parameter>
     <!--Name of TrackerHit SimTrackHit relation collection-->
-    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> VETrackerHitRelations </parameter>
+    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> VXDEndcapTrackerHitRelations </parameter>
     <!--Name of the TrackerHit output collection-->
-    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> VETrackerHits </parameter>
+    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> VXDEndcapTrackerHits </parameter>
     <!--resolution in time-->
     <parameter name="ResolutionT" type="FloatVec"> 0.03  </parameter>
     <!--resolution in direction of u - either one per layer or one for all layers -->
@@ -1365,9 +1365,9 @@
     <!--Name of the Input SimTrackerHit collection-->
     <parameter name="SimTrackHitCollectionName" type="string" lcioInType="SimTrackerHit"> InnerTrackerBarrelCollection </parameter>
     <!--Name of TrackerHit SimTrackHit relation collection-->
-    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> IBTrackerHitsRelations </parameter>
+    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> InnerTrackerBarrelHitsRelations  </parameter>
     <!--Name of the TrackerHit output collection-->
-    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> IBTrackerHits </parameter>
+    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> ITrackerHits </parameter>
     <!--resolution in time-->
     <parameter name="ResolutionT" type="FloatVec"> 0.06  </parameter>
     <!--resolution in direction of u - either one per layer or one for all layers -->
@@ -1394,9 +1394,9 @@
     <!--Name of the Input SimTrackerHit collection-->
     <parameter name="SimTrackHitCollectionName" type="string" lcioInType="SimTrackerHit"> InnerTrackerEndcapCollection </parameter>
     <!--Name of TrackerHit SimTrackHit relation collection-->
-    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> IETrackerHitsRelations </parameter>
+    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> InnerTrackerEndcapHitsRelations </parameter>
     <!--Name of the TrackerHit output collection-->
-    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> IETrackerHits </parameter>
+    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> ITrackerEndcapHits  </parameter>
     <!--resolution in time-->
     <parameter name="ResolutionT" type="FloatVec"> 0.06  </parameter>
     <!--resolution in direction of u - either one per layer or one for all layers -->
@@ -1423,9 +1423,9 @@
     <!--Name of the Input SimTrackerHit collection-->
     <parameter name="SimTrackHitCollectionName" type="string" lcioInType="SimTrackerHit"> OuterTrackerBarrelCollection </parameter>
     <!--Name of TrackerHit SimTrackHit relation collection-->
-    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> OBTrackerHitsRelations </parameter>
+    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> OuterTrackerBarrelHitsRelations </parameter>
     <!--Name of the TrackerHit output collection-->
-    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> OBTrackerHits </parameter>
+    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> OTrackerHits </parameter>
     <!--resolution in time-->
     <parameter name="ResolutionT" type="FloatVec"> 0.06  </parameter>
     <!--resolution in direction of u - either one per layer or one for all layers -->
@@ -1452,9 +1452,9 @@
     <!--Name of the Input SimTrackerHit collection-->
     <parameter name="SimTrackHitCollectionName" type="string" lcioInType="SimTrackerHit"> OuterTrackerEndcapCollection </parameter>
     <!--Name of TrackerHit SimTrackHit relation collection-->
-    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> OETrackerHitsRelations </parameter>
+    <parameter name="SimTrkHitRelCollection" type="string" lcioOutType="LCRelation"> OuterTrackerEndcapHitsRelations </parameter>
     <!--Name of the TrackerHit output collection-->
-    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> OETrackerHits </parameter>
+    <parameter name="TrackerHitCollectionName" type="string" lcioOutType="TrackerHitPlane"> OTrackerEndcapHits </parameter>
     <!--resolution in time-->
     <parameter name="ResolutionT" type="FloatVec"> 0.06  </parameter>
     <!--resolution in direction of u - either one per layer or one for all layers -->
@@ -1480,9 +1480,9 @@
     <parameter name="FillHistograms" type="bool" value="true" />
     <parameter name="SubDetectorName" type="string" value="Vertex" />
     <!-- Name of the input hit collection -->
-    <parameter name="InputCollection" type="string" value="VBTrackerHits" />
+    <parameter name="InputCollection" type="string" value="VXDTrackerHits" />
     <!-- Name of the output filtered hit collection -->
-    <parameter name="OutputCollection" type="string" value="VBTrackerHits_DLFiltered" />
+    <parameter name="OutputCollection" type="string" value="VXDTrackerHits_DLFiltered" />
     <!-- Configuration of the maximum dX and dTheta between a pair of hits at the inner and outer layer -->
     <!-- 4 numbers per double-layer: <inner layer ID>  <outer layer ID>  <dX max [mm]>  <dTheta max [mrad]> -->
     <parameter name="DoubleLayerCuts" type="StringVec">
@@ -1498,9 +1498,9 @@
     <parameter name="FillHistograms" type="bool" value="true" />
     <parameter name="SubDetectorName" type="string" value="Vertex" />
     <!-- Name of the input hit collection -->
-    <parameter name="InputCollection" type="string" value="VETrackerHits" />
+    <parameter name="InputCollection" type="string" value="VXDEndcapTrackerHits" />
     <!-- Name of the output filtered hit collection -->
-    <parameter name="OutputCollection" type="string" value="VETrackerHits_DLFiltered" />
+    <parameter name="OutputCollection" type="string" value="VXDEndcapTrackerHits_DLFiltered" />
     <!-- Configuration of the maximum dX and dTheta between a pair of hits at the inner and outer layer -->
     <!-- 4 numbers per double-layer: <inner layer ID>  <outer layer ID>  <dX max [mm]>  <dTheta max [mrad]> -->
     <parameter name="DoubleLayerCuts" type="StringVec">
