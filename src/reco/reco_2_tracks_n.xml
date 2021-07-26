@@ -121,22 +121,22 @@
   <processor name="VBLayerSplitter" type="SplitCollectionByLayer">
     <parameter name="Verbosity" type="string">DEBUG5</parameter>
     <parameter name="KeepEmptyCollections" type="bool" value="true" />
-    <parameter name="InputCollection" type="String"> VBTrackerHits </parameter>
+    <parameter name="InputCollection" type="String"> VXDTrackerHits </parameter>
     <parameter name="OutputCollections" type="StringVec">
-      VBTrackerHitsInner 0 1
-      VBTrackerHitsMiddle 2 4
-      VBTrackerHitsOuter 5 7
+      VXDTrackerHitsInner 0 1
+      VXDTrackerHitsMiddle 2 4
+      VXDTrackerHitsOuter 5 7
     </parameter>
   </processor>
 
   <processor name="VELayerSplitter" type="SplitCollectionByLayer">
     <parameter name="Verbosity" type="string">DEBUG5</parameter>
     <parameter name="KeepEmptyCollections" type="bool" value="true" />
-    <parameter name="InputCollection" type="String"> VETrackerHits </parameter>
+    <parameter name="InputCollection" type="String"> VXDEndcapTrackerHits </parameter>
     <parameter name="OutputCollections" type="StringVec">
-      VETrackerHitsInner 0 1
-      VETrackerHitsMiddle 2 3
-      VETrackerHitsOuter 4 7
+      VXDEndcapTrackerHitsInner 0 1
+      VXDEndcapTrackerHitsMiddle 2 3
+      VXDEndcapTrackerHitsOuter 4 7
     </parameter>
   </processor>
 
@@ -176,52 +176,52 @@
     <parameter name="Verbosity" type="string">MESSAGE</parameter>
 
     <processor name="Ct7" type="ConformalTrackingV2">
-      <parameter name="RelationsNames" type="StringVec" lcioInType="LCRelation"> VBTrackerHitsRelations VBTrackerHitsRelations VBTrackerHitsRelations VETrackerHitsRelations VETrackerHitsRelations VETrackerHitsRelations IBTrackerHitsRelations OBTrackerHitsRelations IETrackerHitsRelations OETrackerHitsRelations </parameter>
+      <parameter name="RelationsNames" type="StringVec" lcioInType="LCRelation"> VXDTrackerHitsRelations VXDTrackerHitsRelations VXDTrackerHitsRelations VXDEndcapTrackerHitsRelations VXDEndcapTrackerHitsRelations VXDEndcapTrackerHitsRelations InnerTrackerBarrelHitsRelations OuterTrackerBarrelHitsRelations InnerTrackerEndcapHitsRelations OuterTrackerEndcapHitsRelations </parameter>
       <!-- Name of the TrackerHit input collections -->
-      <parameter name="TrackerHitCollectionNames" type="StringVec" lcioInType="TrackerHitPlane"> VBTrackerHitsInner VBTrackerHitsMiddle VBTrackerHitsOuter VETrackerHitsInner VETrackerHitsMiddle VETrackerHitsOuter IBTrackerHits OBTrackerHits IETrackerHits OETrackerHits </parameter>
+      <parameter name="TrackerHitCollectionNames" type="StringVec" lcioInType="TrackerHitPlane"> VXDTrackerHitsInner VXDTrackerHitsMiddle VXDTrackerHitsOuter VXDEndcapTrackerHitsInner VXDEndcapTrackerHitsMiddle VXDEndcapTrackerHitsOuter ITrackerEndcapHits ITrackerHits ITrackerEndcapHits ITrackerEndcapHits </parameter>
 
       <parameter name="Steps" type="StringVec">
         [VXDCentral]
-        @Collections : VBTrackerHitsMiddle, VBTrackerHitsOuter, VETrackerHitsInner
+        @Collections : VXDTrackerHitsMiddle, VXDTrackerHitsOuter, VXDEndcapTrackerHitsInner
         @Parameters : MaxCellAngle : 0.01; MaxCellAngleRZ : 0.014; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.01; SlopeZRange: 1.4; HighPTCut: 1.0;
         @Flags : HighPTFit, VertexToTracker
         @Functions : CombineCollections, BuildNewTracks
         [VXDCentralExtend]
-        @Collections : VETrackerHitsInner, VETrackerHitsMiddle
+        @Collections : VXDEndcapTrackerHitsInner, VXDEndcapTrackerHitsMiddle
         @Parameters : MaxCellAngle : 0.01; MaxCellAngleRZ : 0.007; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.006; SlopeZRange: 1.4; HighPTCut: 1.0;
         @Flags : HighPTFit, VertexToTracker
         @Functions : CombineCollections, ExtendTracks
         [VXDMiddle]
-        @Collections : VBTrackerHitsInner, VBTrackerHitsMiddle, VBTrackerHitsOuter, VETrackerHitsInner, VETrackerHitsMiddle
+        @Collections : VXDTrackerHitsInner, VXDTrackerHitsMiddle, VXDTrackerHitsOuter, VXDEndcapTrackerHitsInner, VXDEndcapTrackerHitsMiddle
         @Parameters : MaxCellAngle : 0.015; MaxCellAngleRZ : 0.014; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.02; SlopeZRange: 3.0; HighPTCut: 1.0;
         @Flags : HighPTFit
         @Functions : CombineCollections, BuildNewTracks
         [VXDMiddleExtend]
-        @Collections : VETrackerHitsOuter
+        @Collections : VXDEndcapTrackerHitsOuter
         @Parameters : MaxCellAngle : 0.02; MaxCellAngleRZ : 0.014; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.01; SlopeZRange: 3.0; HighPTCut: 1.0;
         @Flags : HighPTFit, VertexToTracker
         @Functions : CombineCollections, ExtendTracks
         [VXDForward]
-        @Collections : VETrackerHitsInner, VETrackerHitsMiddle, VETrackerHitsOuter
+        @Collections : VXDEndcapTrackerHitsInner, VXDEndcapTrackerHitsMiddle, VXDEndcapTrackerHitsOuter
         @Parameters : MaxCellAngle : 0.03; MaxCellAngleRZ : 0.03; Chi2Cut : 60; MinClustersOnTrack : 4; MaxDistance : 0.02; SlopeZRange: 6.0; HighPTCut: 1.0;
         @Flags : HighPTFit
         @Functions : CombineCollections, BuildNewTracks
         [VXDInner]
-        @Collections : VBTrackerHitsInner
+        @Collections : VXDTrackerHitsInner
         @Parameters : MaxCellAngle : 0.015; MaxCellAngleRZ : 0.015; Chi2Cut : 60; MinClustersOnTrack : 5; MaxDistance : 0.015; SlopeZRange: 3.0; HighPTCut: 1.0;
         @Flags : HighPTFit, RadialSearch
         @Functions : CombineCollections, ExtendTracks, SortTracks
         [Tracker]
-        @Collections : IBTrackerHits, OBTrackerHits, IETrackerHits, OETrackerHits
+        @Collections : ITrackerHits, ITrackerHits, ITrackerEndcapHits, ITrackerEndcapHits
         @Parameters : MaxCellAngle : 0.04; MaxCellAngleRZ : 0.03; Chi2Cut : 200; MinClustersOnTrack : 6; MaxDistance : 0.02; SlopeZRange: 6.0; HighPTCut: 1.0;
         @Flags : HighPTFit, VertexToTracker, RadialSearch
         @Functions : CombineCollections, ExtendTracks
+        
       </parameter>
 
     </processor>
 
   </group>
-
 
   <processor name="ClonesAndSplitTracksFinder" type="ClonesAndSplitTracksFinder">
     <parameter name="InputTrackCollectionName" type="string"> SiTracksCT </parameter>
