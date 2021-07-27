@@ -14,7 +14,7 @@
 </execute>
 
 <global>
- <parameter name="LCIOInputFiles"> muonGun_reco.000.slcio </parameter>
+ <parameter name="LCIOInputFiles"> muonGun_reco_hits.slcio </parameter>
  <!-- limit the number of processed records (run+evt): -->  
  <parameter name="MaxRecordNumber" value="-1" />  
  <parameter name="SkipNEvents" value="0"/>  
