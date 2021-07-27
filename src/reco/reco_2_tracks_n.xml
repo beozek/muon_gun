@@ -152,28 +152,28 @@
   <!--ConformalTracking constructs tracks using a combined conformal mapping and cellular automaton approach.-->
 
     <!--Name of the MCParticle input collection-->
-    <parameter name="MCParticleCollectionName" type="string" lcioInType="MCParticle"> MCParticle </parameter>
+    <!--<parameter name="MCParticleCollectionName" type="string" lcioInType="MCParticle"> MCParticle </parameter>-->
     <!--Silicon track Collection Name-->
-    <parameter name="SiTrackCollectionName" type="string" lcioOutType="Track">SiTracksCT </parameter>
+    <!--<parameter name="SiTrackCollectionName" type="string" lcioOutType="Track">SiTracksCT </parameter>-->
     <!--Debug hits Collection Name-->
-    <parameter name="DebugHits" type="string" lcioOutType="TrackerHitPlane"> DebugHits </parameter>
+    <!--<parameter name="DebugHits" type="string" lcioOutType="TrackerHitPlane"> DebugHits </parameter>-->
     <!--Maximum number of track hits to try the inverted fit-->
-    <parameter name="MaxHitInvertedFit" type="int">6 </parameter>
+    <!--<parameter name="MaxHitInvertedFit" type="int">6 </parameter>-->
     <!--Final minimum number of track clusters-->
-    <parameter name="MinClustersOnTrackAfterFit" type="int">4 </parameter>
+    <!--<parameter name="MinClustersOnTrackAfterFit" type="int">4 </parameter>-->
     <!--enable debug timing -->
-    <parameter name="DebugTiming" type="bool">false </parameter>
+    <!--<parameter name="DebugTiming" type="bool">false </parameter>-->
     <!--enable debug plots -->
-    <parameter name="DebugPlots" type="bool">false </parameter>
+    <!--<parameter name="DebugPlots" type="bool">false </parameter>-->
     <!--retry with tightened parameters, when too many tracks are being created-->
-    <parameter name="RetryTooManyTracks" type="bool">true </parameter>
-    <parameter name="TooManyTracks" type="int">50000 </parameter>
+    <!--<parameter name="RetryTooManyTracks" type="bool">true </parameter>-->
+    <!--<parameter name="TooManyTracks" type="int">50000 </parameter>-->
     <!--sort results from kdtree search-->
-    <parameter name="SortTreeResults" type="bool">true </parameter>
-    <parameter name="trackPurity" type="double">0.7 </parameter>
-    <parameter name="ThetaRange" type="double"> 0.05 </parameter>
+    <!--<parameter name="SortTreeResults" type="bool">true </parameter>-->
+    <!--<parameter name="trackPurity" type="double">0.7 </parameter>-->
+    <!--<parameter name="ThetaRange" type="double"> 0.05 </parameter>-->
     <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
-    <parameter name="Verbosity" type="string">MESSAGE</parameter>
+    <!--<parameter name="Verbosity" type="string">MESSAGE</parameter> -->
 
     <processor name="Ct7" type="ConformalTrackingV2">
       <parameter name="RelationsNames" type="StringVec" lcioInType="LCRelation"> VXDTrackerHitsRelations VXDTrackerHitsRelations VXDTrackerHitsRelations VXDEndcapTrackerHitsRelations VXDEndcapTrackerHitsRelations VXDEndcapTrackerHitsRelations InnerTrackerBarrelHitsRelations OuterTrackerBarrelHitsRelations InnerTrackerEndcapHitsRelations OuterTrackerEndcapHitsRelations </parameter>
@@ -224,7 +224,7 @@
   </group>
 
   <processor name="ClonesAndSplitTracksFinder" type="ClonesAndSplitTracksFinder">
-    <parameter name="InputTrackCollectionName" type="string"> SiTracksCT </parameter>
+   <!-- <parameter name="InputTrackCollectionName" type="string"> SiTracksCT </parameter> -->
     <parameter name="OutputTrackCollectionName" type="string"> SiTracks </parameter>
     <parameter name="MultipleScatteringOn" type="bool"> true </parameter>
     <parameter name="EnergyLossOn" type="bool"> true </parameter>
