@@ -50,7 +50,7 @@
     <!--Names of LCRelation collections of PFO-->
     <parameter name="LCRelationwithPFOCollections" type="string" lcioInType="LCRelation"> </parameter>
     <!--Name of the MCParticle collection-->
-    <parameter name="MCParticleCollection" type="string" lcioInType="MCParticle"> MCParticle </parameter>
+    <!--<parameter name="MCParticleCollection" type="string" lcioInType="MCParticle"> MCParticle </parameter>-->53"
     <!--Name of the MCParticle collection where the overlay is removed-->111111
     <parameter name="MCParticleRemoveOverlayCollection" type="string" lcioInType="MCParticle"> </parameter>
     <!--Name of the PFO collection with Relation-->
